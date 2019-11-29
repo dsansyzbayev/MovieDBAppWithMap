@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#030305"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:padding="20sp">
+
+    <EditText
+        android:id="@+id/editTextUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorPrimary"
+        android:hint="Username"
+        android:inputType="textPersonName"
+        android:textColor="#2196F3" />
+
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:backgroundTint="@color/colorPrimary"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textColor="#2196F3" />
+
+    <Button
+        android:id="@+id/buttonLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5sp"
+        android:background="@drawable/border"
+        android:text="Login"
+        android:textColor="#2196F3" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10sp"
+        android:visibility="gone" />
+
+</LinearLayout>
