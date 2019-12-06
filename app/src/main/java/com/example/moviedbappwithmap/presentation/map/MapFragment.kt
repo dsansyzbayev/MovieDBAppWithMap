@@ -5,7 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.NavController
+import androidx.navigation.Navigation
 import com.example.moviedbappwithmap.R
+import com.example.moviedbappwithmap.base.BaseFragment
 import com.google.android.gms.maps.*
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
@@ -14,6 +17,7 @@ class MapFragment : Fragment() {
 
     lateinit var mapFragment: SupportMapFragment
     lateinit var googleMap: GoogleMap
+    private lateinit var navController: NavController
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
