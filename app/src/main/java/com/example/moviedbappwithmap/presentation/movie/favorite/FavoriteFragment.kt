@@ -115,7 +115,7 @@ class FavoriteFragment : BaseFragment() {
     }
 
 
-    override fun setData() {
+    fun setData() {
         viewModel.loadFavMovies(accountId, sessionId)
 
         viewModel.liveData.observe(viewLifecycleOwner, Observer { result ->

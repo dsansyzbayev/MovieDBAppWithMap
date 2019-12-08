@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.example.moviedbappwithmap.R
-import com.example.moviedbappwithmap.base.BaseFragment
 import com.google.android.gms.maps.*
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
@@ -18,6 +17,12 @@ class MapFragment : Fragment() {
     lateinit var mapFragment: SupportMapFragment
     lateinit var googleMap: GoogleMap
     private lateinit var navController: NavController
+    private var markers = ArrayList<LatLng>()
+
+    companion object {
+        fun newInstance() : MapFragment =
+            MapFragment()
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -29,8 +34,16 @@ class MapFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        bindViews(view)
+        setMarkers()
+    }
 
-        mapFragment = childFragmentManager.findFragmentById(R.id.mapFragment) as SupportMapFragment
+    fun bindViews(view: View) = with(view) {
+        navController = Navigation.findNavController(this)
+        mapFragment = childFragmentManager.findFragmentById(R.id.cinemaFragment) as SupportMapFragment
+    }
+
+    fun setMarkers() {
         mapFragment.getMapAsync(OnMapReadyCallback {
             googleMap = it
 
@@ -64,7 +77,7 @@ class MapFragment : Fragment() {
 
             val location8 = LatLng(43.211946,76.842262)
             googleMap.addMarker(MarkerOptions().position(location7).title("Kinopark 6 Sputnik"))
-            googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(location7,10f))
+            googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(location8,10f))
         })
     }
 }
