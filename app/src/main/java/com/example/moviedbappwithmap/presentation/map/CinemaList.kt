@@ -14,11 +14,12 @@ import com.example.moviedbappwithmap.R
 import com.example.moviedbappwithmap.base.BaseFragment
 import com.example.moviedbappwithmap.data.CinemaDataBase.Cinema
 import com.example.moviedbappwithmap.presentation.map.adapters.CinemaListAdapter
+import org.koin.android.ext.android.inject
 
 class CinemaList : BaseFragment() {
 
     private lateinit var navController: NavController
-    private lateinit var listViewModel: CinemaViewModel
+    private val listViewModel: CinemaViewModel by inject()
     private lateinit var recyclerViewCinema: RecyclerView
 
     companion object {
@@ -35,8 +36,6 @@ class CinemaList : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        listViewModel = ViewModelProviders.of(this).get(CinemaViewModel::class.java)
         bindViews(view)
         setAdapter()
         setData()

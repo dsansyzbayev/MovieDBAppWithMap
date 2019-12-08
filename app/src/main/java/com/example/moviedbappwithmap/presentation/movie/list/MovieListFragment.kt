@@ -19,11 +19,12 @@ import com.example.moviedbappwithmap.base.BaseFragment
 import com.example.moviedbappwithmap.data.models.MovieData
 import com.example.moviedbappwithmap.utils.AppConstants
 import com.example.moviedbappwithmap.utils.PaginationListener
+import org.koin.android.ext.android.inject
 
 class MovieListFragment : BaseFragment() {
 
     private lateinit var navController: NavController
-    private lateinit var viewModel: MovieListViewModel
+    private val viewModel: MovieListViewModel by inject()
     private lateinit var rvMovies: RecyclerView
     private lateinit var srlMovies: SwipeRefreshLayout
 
@@ -60,7 +61,6 @@ class MovieListFragment : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(MovieListViewModel::class.java)
         bindViews(view)
         setAdapter()
         setData()

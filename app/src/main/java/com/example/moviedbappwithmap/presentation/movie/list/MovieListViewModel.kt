@@ -11,13 +11,11 @@ import com.example.moviedbappwithmap.extensions.launchSafe
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
-class MovieListViewModel: BaseViewModel() {
+class MovieListViewModel(private val movieRepository: MovieRepository): BaseViewModel() {
 
     private val _liveData = MutableLiveData<State>()
     val liveData: LiveData<State>
         get() = _liveData
-
-    private val movieRepository: MovieRepository = MovieRepositoryImpl()
 
 
     override fun handleError(e: Throwable) {

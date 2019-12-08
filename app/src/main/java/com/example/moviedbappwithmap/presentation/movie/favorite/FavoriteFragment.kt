@@ -24,10 +24,11 @@ import com.example.moviedbappwithmap.presentation.movie.list.MovieAdapter
 import com.example.moviedbappwithmap.utils.AppConstants
 import com.example.moviedbappwithmap.utils.AppPreferences
 import com.example.moviedbappwithmap.utils.PaginationListener
+import org.koin.android.ext.android.inject
 
 class FavoriteFragment : BaseFragment() {
     private lateinit var navController: NavController
-    private lateinit var viewModel: FavoriteMoviesViewModel
+    private val viewModel: FavoriteMoviesViewModel by inject()
     private lateinit var rvFavMovies: RecyclerView
     private lateinit var srlFavMovies: SwipeRefreshLayout
     private lateinit var progressBar: ProgressBar
@@ -79,7 +80,6 @@ class FavoriteFragment : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(FavoriteMoviesViewModel::class.java)
         initId()
         bindViews(view)
         setAdapter()

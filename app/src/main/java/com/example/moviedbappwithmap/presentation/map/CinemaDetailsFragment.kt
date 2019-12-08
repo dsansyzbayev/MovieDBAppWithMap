@@ -11,6 +11,7 @@ import androidx.lifecycle.ViewModelProviders
 import com.bumptech.glide.Glide
 import com.example.moviedbappwithmap.R
 import com.example.moviedbappwithmap.base.BaseFragment
+import org.koin.android.ext.android.inject
 
 class CinemaDetailsFragment : BaseFragment() {
     private lateinit var viewModel: CinemaDetailsViewModel
@@ -31,7 +32,6 @@ class CinemaDetailsFragment : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         viewModel = ViewModelProviders.of(this).get(CinemaDetailsViewModel::class.java)
         bindViews(view)
         setData()

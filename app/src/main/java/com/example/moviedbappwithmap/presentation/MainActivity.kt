@@ -7,7 +7,11 @@ import androidx.navigation.Navigation
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupWithNavController
 import com.example.moviedbappwithmap.R
+import com.example.moviedbappwithmap.presentation.di.appModule
+import com.facebook.stetho.Stetho
 import kotlinx.android.synthetic.main.activity_main.*
+import org.koin.android.ext.koin.androidContext
+import org.koin.core.context.startKoin
 
 
 class MainActivity : AppCompatActivity() {

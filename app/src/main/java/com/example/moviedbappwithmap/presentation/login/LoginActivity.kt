@@ -12,16 +12,15 @@ import com.example.moviedbappwithmap.R
 import com.example.moviedbappwithmap.presentation.MainActivity
 import com.example.moviedbappwithmap.utils.AppPreferences
 import kotlinx.android.synthetic.main.activity_login.*
+import org.koin.android.ext.android.inject
 
 class LoginActivity : AppCompatActivity() {
 
-    private lateinit var loginViewModel: LoginViewModel
+    private val loginViewModel: LoginViewModel by inject()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-
-        loginViewModel = ViewModelProviders.of(this).get(LoginViewModel::class.java)
 
         buttonLogin.setOnClickListener{
             loginViewModel.login(

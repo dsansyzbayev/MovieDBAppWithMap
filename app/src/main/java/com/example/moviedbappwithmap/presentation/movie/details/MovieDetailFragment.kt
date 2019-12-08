@@ -13,10 +13,11 @@ import com.example.moviedbappwithmap.R
 import com.example.moviedbappwithmap.base.BaseFragment
 import com.example.moviedbappwithmap.utils.AppConstants
 import com.example.moviedbappwithmap.utils.AppPreferences
+import org.koin.android.ext.android.inject
 
 class MovieDetailFragment : BaseFragment() {
 
-    private lateinit var viewModel: MovieDetailViewModel
+    private val viewModel: MovieDetailViewModel by inject()
 
     private lateinit var progressBar: ProgressBar
     private lateinit var ivPoster: ImageView
@@ -40,7 +41,6 @@ class MovieDetailFragment : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(MovieDetailViewModel::class.java)
         bindViews(view)
         setData()
 
