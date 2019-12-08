@@ -27,11 +27,25 @@
         android:label="Profile"
         tools:layout="@layout/fragment_profile" />
     <fragment
-        android:id="@+id/mapFragment"
+        android:id="@+id/cinemaFragment"
+        android:name="com.example.moviedbappwithmap.presentation.map.CinemaFragment"
+        android:label="Cinema">
+        <action
+            android:id="@+id/action_cinemaFragment_to_cinemaDetailsFragment"
+            app:destination="@id/cinemaDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/cinemaMapFragment"
         android:name="com.example.moviedbappwithmap.presentation.map.MapFragment"
-        android:label="Map"
-        tools:layout="@layout/fragment_map"
-        />
+        android:label="map_fragment"
+        tools:layout="@layout/fragment_map"></fragment>
+
+    <fragment
+        android:id="@+id/cinemaDetailsFragment"
+        android:name="com.example.moviedbappwithmap.presentation.map.CinemaDetailsFragment"
+        android:label="cinemaDetails"
+        tools:layout="@layout/fragment_cinema_overview" />
 
     <fragment
         android:id="@+id/favoriteFragment"

@@ -60,8 +60,8 @@ class MovieDetailFragment : BaseFragment() {
 
     override fun bindViews(view: View) = with(view){
         progressBar = view.findViewById(R.id.progressBar)
-        ivPoster = view.findViewById(R.id.ivPoster)
-        tvName = view.findViewById(R.id.tvName)
+        ivPoster = view.findViewById(R.id.tvPoster)
+        tvName = view.findViewById(R.id.tvTitle)
         tvRating = view.findViewById(R.id.tvRating)
         tvGenre = view.findViewById(R.id.tvGenre)
         tvOverview = view.findViewById(R.id.tvOverview)
@@ -70,8 +70,7 @@ class MovieDetailFragment : BaseFragment() {
 
         movieId = arguments?.getInt(AppConstants.MOVIE_ID)
     }
-
-    override fun setData() {
+    fun setData() {
         movieId?.let { movieId ->
             viewModel.getMovie(movieId)
         }

@@ -100,10 +100,10 @@ class MovieAdapter(
         private val ivPoster: ImageView
 
         init {
-            tvName = view.findViewById(R.id.tvName)
+            tvName = view.findViewById(R.id.tvTitle)
             tvOverview = view.findViewById(R.id.tvOverview)
             tvRating = view.findViewById(R.id.tvRating)
-            ivPoster = view.findViewById(R.id.ivPoster)
+            ivPoster = view.findViewById(R.id.tvPoster)
         }
 
         fun bind(movie: MovieData) {
