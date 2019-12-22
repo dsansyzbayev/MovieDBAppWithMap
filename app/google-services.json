@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "27290365345",
+    "firebase_url": "https://movieappwithmap.firebaseio.com",
+    "project_id": "movieappwithmap",
+    "storage_bucket": "movieappwithmap.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:27290365345:android:f4e027fe04722df4176fe0",
+        "android_client_info": {
+          "package_name": "com.example.moviedbappwithmap"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "27290365345-6544bgdkfo9p5n2fh0sbj0afbt7odee7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.moviedbappwithmap",
+            "certificate_hash": "4ee6bb1fff7f356b5bfe67f20a2f26201e61d909"
+          }
+        },
+        {
+          "client_id": "27290365345-h3ja9gbdqbhe5vkm3t0prd02dmbi0906.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAIY0yOdjDKN6v9C3W-fEUkStbAkF_pB6A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "27290365345-h3ja9gbdqbhe5vkm3t0prd02dmbi0906.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

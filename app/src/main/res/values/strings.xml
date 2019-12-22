@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">MovieDbExtendedApp</string>
+
+    <string name="movie_list_activity">List</string>
+    <string name="movie_favorite_activity">Favorite</string>
+    <string name="movie_profile_activity">Profile</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="google_maps_key">AIzaSyCN6973IKkdF_Dd3LOmewj_yaBAlq5_Zy0</string>
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+</resources>
